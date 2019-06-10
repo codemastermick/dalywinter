@@ -20,11 +20,6 @@ const routes: Routes = [
       import("./pages/contact/contact.module").then(m => m.ContactModule)
   },
   {
-    path: paths.docs,
-    loadChildren: () =>
-      import("./pages/docs/docs.module").then(m => m.DocsModule)
-  },
-  {
     path: "404",
     loadChildren: () =>
       import("../app/pages/errors/not-found/not-found.module").then(
