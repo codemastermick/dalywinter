@@ -1,0 +1,29 @@
+.czima {
+  background-image: url('../../../assets/img/chuck_profile.webp');
+  background-size: cover;
+}
+
+.sdaly {
+  background-image: url('../../../assets/img/scott_profile.webp');
+  background-size: cover;
+}
+
+.mevans{
+  background-image: url('../../../assets/img/mick_profile.webp');
+  background-size: cover;
+}
+
+mat-card{
+  max-width: 400px;
+}
+
+mat-card-actions{
+  padding-left: 2%;
+  padding-right: 2%;
+  margin-left: 2%;
+  margin-right: 2%;
+}
+
+a{
+  text-decoration: none;
+}

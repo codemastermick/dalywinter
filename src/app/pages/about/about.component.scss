@@ -1,0 +1,36 @@
+h2{
+  text-align: center;
+}
+
+mat-card{
+  max-width: 50%;
+}
+
+mat-card-subtitle{
+  color: black;
+}
+
+.seniorPartner{
+  max-width: 55%;
+  background-color: rgba(160,160,160,180);
+}
+
+.headline{
+  text-align: center;
+  font-size: 1.25em;
+}
+
+.sdaly{
+  background-image: url('../../../assets/img/scott_profile.webp');
+  background-size: cover;
+}
+
+.czima{
+  background-image: url('../../../assets/img/chuck_profile.webp');
+  background-size: cover;
+}
+
+.mevans{
+  background-image: url('../../../assets/img/mick_profile.webp');
+  background-size: cover;
+}

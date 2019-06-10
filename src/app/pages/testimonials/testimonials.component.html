@@ -1,0 +1,21 @@
+<div *ngIf="(testimonials | async)?.length>0; else elseBlock">
+  <p class="outside-card">Customer Testimonials</p>
+  <ul>
+      <li *ngFor="let testimonial of testimonials | async">
+        <mat-card>
+          <mat-card-header>
+            <mat-card-title>
+              <b [class.done]="testimonial.data.done">{{testimonial.data.author}}</b>
+            </mat-card-title>
+            <mat-card-subtitle>
+              <b [class.done]="testimonial.data.done">{{testimonial.data.position}}</b>
+            </mat-card-subtitle>
+          </mat-card-header>
+          <mat-card-content>
+            <b [class.done]="testimonial.data.done">{{testimonial.data.description}}</b>
+          </mat-card-content>
+        </mat-card>
+      </li>
+    </ul>
+</div>
+<ng-template #elseBlock><p class="outside-card">UNDER CONSTRUCTION</p></ng-template>
