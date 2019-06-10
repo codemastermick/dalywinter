@@ -1,0 +1,25 @@
+language: node_js
+node_js:
+  - "10.15.3"
+branches:
+  only:
+    - master
+install:
+  - npm install -g codecov
+  - npm install -g istanbul
+before_script:
+  - npm install -g @angular/cli
+script:
+  - npm install
+  - npm run lint
+  - npm run test:coverage
+  - npm run test-with-coverage
+  - npm run build:ssr
+  - codecov
+after_success:
+  - bash <(curl -s https://codecov.io/bash)
+deploy:
+  skip_cleanup: true
+  provider: firebase
+  token:
+    secure: $FIREBASE_TOKEN
