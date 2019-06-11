@@ -9,12 +9,12 @@ describe("NotFoundComponent", () => {
   let component: NotFoundComponent;
   let fixture: ComponentFixture<NotFoundComponent>;
 
-  beforeEach(async(() => {
+  beforeEach(() => {
     TestBed.configureTestingModule({
       imports: [RouterTestingModule, NotFoundRoutingModule, MaterialModule],
       declarations: [NotFoundComponent]
     }).compileComponents();
-  }));
+  });
 
   beforeEach(() => {
     fixture = TestBed.createComponent(NotFoundComponent);

@@ -15,7 +15,7 @@ describe("HeaderComponent", () => {
   let sidenav: SidenavListComponent;
   let spy: any;
 
-  beforeEach(async(() => {
+  beforeEach(() => {
     TestBed.configureTestingModule({
       imports: [
         MaterialModule,
@@ -25,7 +25,7 @@ describe("HeaderComponent", () => {
       declarations: [HeaderComponent],
       providers: [AngularFirestore, AngularFireAuth]
     }).compileComponents();
-  }));
+  });
 
   beforeEach(() => {
     fixture = TestBed.createComponent(HeaderComponent);

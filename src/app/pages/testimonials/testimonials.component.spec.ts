@@ -11,7 +11,7 @@ describe("TestimonialsComponent", () => {
   let component: TestimonialsComponent;
   let fixture: ComponentFixture<TestimonialsComponent>;
 
-  beforeEach(async(() => {
+  beforeEach(() => {
     TestBed.configureTestingModule({
       declarations: [TestimonialsComponent],
       imports: [
@@ -21,7 +21,7 @@ describe("TestimonialsComponent", () => {
       ],
       providers: [AngularFirestore]
     }).compileComponents();
-  }));
+  });
 
   beforeEach(() => {
     fixture = TestBed.createComponent(TestimonialsComponent);
