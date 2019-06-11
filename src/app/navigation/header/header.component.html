@@ -1,22 +1,63 @@
 <mat-toolbar color="primary">
-  <mat-toolbar-row>
-    <img
-      mat-card-avatar
-      alt="Ng-Fast logo"
-      src="https://firebasestorage.googleapis.com/v0/b/ngfaster.appspot.com/o/icon_48.png?alt=media&token=7a60a1aa-9089-4c97-a106-3a02e36a7b04"
-      style="max-width: 48px;"
-    />
-    {{ title }}
-  </mat-toolbar-row>
-</mat-toolbar>
-<mat-toolbar color="accent" class="navbar">
+  <div fxHide.gt-sm>
+    <button mat-icon-button (click)="onToggleSidenav()" aria-label="Home">
+      <span class="icon-menu"></span>
+    </button>
+  </div>
   <div>
     <a routerLink="/home">Home</a>
-    &nbsp;
-    <a routerLink="/about">About</a>
-    &nbsp;
-    <a routerLink="/contact">Contact</a>
-    &nbsp;
-    <a routerLink="/docs">Docs</a>
+  </div>
+  <div fxFlex fxLayout fxLayoutAlign="space-evenly" fxHide.lt-md>
+    <ul fxLayout fxLayoutAlign="space-evenly" fxLayoutGap="10vw" class="navigation-items">
+      <li>
+        <button mat-icon-button>
+          <a routerLink="/about">About Us</a>
+        </button>
+      </li>
+
+      <li>
+        <button mat-icon-button [matMenuTriggerFor]="appMenu">
+          Solutions
+        </button>
+        <mat-menu #appMenu="matMenu">
+          <button mat-menu-item>
+            <a routerLink="/fpo">For Profit Organizations</a>
+          </button>
+          <button mat-menu-item>
+            <a routerLink="/npo">Not for Profit Organizations</a>
+          </button>
+          <button mat-menu-item>
+            <a routerLink="/unions">For Unions & Associations</a>
+          </button>
+          <button mat-menu-item>
+            <a routerLink="/brokers">For Brokers & Consultants</a>
+          </button>
+        </mat-menu>
+      </li>
+
+      <li>
+        <button mat-icon-button>
+          <a routerLink="/resources">Resources</a>
+        </button>
+      </li>
+
+      <li>
+        <button mat-icon-button>
+          <a routerLink="/partner-providers">Partner Providers</a>
+        </button>
+      </li>
+
+      <li>
+        <button mat-icon-button>
+          <a routerLink="/contact">Contact Us</a>
+        </button>
+      </li>
+
+      <li>
+        <button mat-icon-button>
+          <a routerLink="/testimonials">Testimonials</a>
+        </button>
+      </li>
+    </ul>
   </div>
 </mat-toolbar>

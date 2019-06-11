@@ -1,4 +1,5 @@
-import { Component, OnInit, Input } from "@angular/core";
+import { Component, OnInit, Output, EventEmitter, Input } from "@angular/core";
+import { AuthService } from "../../shared/auth.service";
 
 @Component({
   selector: "app-header",
@@ -7,7 +8,13 @@ import { Component, OnInit, Input } from "@angular/core";
 })
 export class HeaderComponent implements OnInit {
   @Input() title = "ngFAST"; // This gets set from app.component.ts
-  constructor() {}
+  @Output() public sidenavToggle = new EventEmitter();
+
+  constructor(public authService: AuthService) {}
 
   ngOnInit() {}
+
+  public onToggleSidenav = () => {
+    this.sidenavToggle.emit();
+  };
 }
