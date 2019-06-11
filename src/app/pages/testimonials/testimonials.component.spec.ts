@@ -32,4 +32,8 @@ describe("TestimonialsComponent", () => {
   it("should create", () => {
     expect(component).toBeTruthy();
   });
+
+  it("should have testimonial content", async(() => {
+    expect(component.testimonials).not.toBeUndefined();
+  }));
 });
