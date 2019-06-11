@@ -1,8 +1,8 @@
-import { NgModule } from '@angular/core';
-import { RouterModule, Routes } from '@angular/router';
-import { NpoComponent } from './npo.component';
+import { NgModule } from "@angular/core";
+import { RouterModule, Routes } from "@angular/router";
+import { NpoComponent } from "./npo.component";
 
-const routes: Routes = [{ path: '', component: NpoComponent }];
+const routes: Routes = [{ path: "", component: NpoComponent }];
 
 @NgModule({
   exports: [RouterModule],

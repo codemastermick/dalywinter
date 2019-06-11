@@ -1,9 +1,9 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit } from "@angular/core";
 
 @Component({
-  selector: 'app-unions',
-  templateUrl: './unions.component.html',
-  styleUrls: ['./unions.component.scss']
+  selector: "app-unions",
+  templateUrl: "./unions.component.html",
+  styleUrls: ["./unions.component.scss"]
 })
 export class UnionsComponent implements OnInit {
 

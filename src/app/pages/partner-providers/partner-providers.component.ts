@@ -1,9 +1,9 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit } from "@angular/core";
 
 @Component({
-  selector: 'app-partner-providers',
-  templateUrl: './partner-providers.component.html',
-  styleUrls: ['./partner-providers.component.scss']
+  selector: "app-partner-providers",
+  templateUrl: "./partner-providers.component.html",
+  styleUrls: ["./partner-providers.component.scss"]
 })
 export class PartnerProvidersComponent implements OnInit {
 

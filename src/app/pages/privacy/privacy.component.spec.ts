@@ -1,8 +1,8 @@
-import { async, ComponentFixture, TestBed } from '@angular/core/testing';
+import { async, ComponentFixture, TestBed } from "@angular/core/testing";
 
-import { PrivacyComponent } from './privacy.component';
+import { PrivacyComponent } from "./privacy.component";
 
-describe('PrivacyComponent', () => {
+describe("PrivacyComponent", () => {
   let component: PrivacyComponent;
   let fixture: ComponentFixture<PrivacyComponent>;
 
@@ -19,7 +19,7 @@ describe('PrivacyComponent', () => {
     fixture.detectChanges();
   });
 
-  it('should create', () => {
+  it("should create", () => {
     expect(component).toBeTruthy();
   });
 });

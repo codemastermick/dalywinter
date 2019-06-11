@@ -1,8 +1,8 @@
-import { NgModule } from '@angular/core';
-import { CommonModule } from '@angular/common';
+import { NgModule } from "@angular/core";
+import { CommonModule } from "@angular/common";
 
-import { UnionsRoutingModule } from './unions-routing.module';
-import { UnionsComponent } from './unions.component';
+import { UnionsRoutingModule } from "./unions-routing.module";
+import { UnionsComponent } from "./unions.component";
 
 @NgModule({
   imports: [CommonModule, UnionsRoutingModule],

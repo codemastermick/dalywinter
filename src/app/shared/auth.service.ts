@@ -1,11 +1,11 @@
-import { Injectable, NgZone } from '@angular/core';
-import { User } from './user.model';
-import { auth } from 'firebase/app';
-import { AngularFireAuth } from '@angular/fire/auth';
-import { AngularFirestore, AngularFirestoreDocument } from '@angular/fire/firestore';
-import { Router } from '@angular/router';
+import { Injectable, NgZone } from "@angular/core";
+import { User } from "./user.model";
+import { auth } from "firebase/app";
+import { AngularFireAuth } from "@angular/fire/auth";
+import { AngularFirestore, AngularFirestoreDocument } from "@angular/fire/firestore";
+import { Router } from "@angular/router";
 @Injectable({
-  providedIn: 'root'
+  providedIn: "root"
 })
 export class AuthService {
   userData: any; // Save logged in user data
@@ -22,11 +22,11 @@ export class AuthService {
     this.afAuth.authState.subscribe(user => {
       if (user) {
         this.userData = user;
-        localStorage.setItem('user', JSON.stringify(this.userData));
-        JSON.parse(localStorage.getItem('user'));
+        localStorage.setItem("user", JSON.stringify(this.userData));
+        JSON.parse(localStorage.getItem("user"));
       } else {
-        localStorage.setItem('user', null);
-        JSON.parse(localStorage.getItem('user'));
+        localStorage.setItem("user", null);
+        JSON.parse(localStorage.getItem("user"));
       }
     });
   }
@@ -36,7 +36,7 @@ export class AuthService {
       .then((result) => {
         this.ngZone.run(() => {
           this.isUserLoggedIn = true;
-          this.router.navigate(['manage-testimonials']);
+          this.router.navigate(["manage-testimonials"]);
         });
         this.SetUserData(result.user);
       }).catch((error) => {
@@ -59,21 +59,21 @@ export class AuthService {
   SendVerificationMail() {
     return this.afAuth.auth.currentUser.sendEmailVerification()
       .then(() => {
-        this.router.navigate(['verify-email-address']);
+        this.router.navigate(["verify-email-address"]);
       });
   }
   // Reset Forggot password
   ForgotPassword(passwordResetEmail) {
     return this.afAuth.auth.sendPasswordResetEmail(passwordResetEmail)
       .then(() => {
-        window.alert('Password reset email sent, check your inbox.');
+        window.alert("Password reset email sent, check your inbox.");
       }).catch((error) => {
         window.alert(error);
       });
   }
   // Returns true when user is looged in and email is verified
   get isLoggedIn(): boolean {
-    const user = JSON.parse(localStorage.getItem('user'));
+    const user = JSON.parse(localStorage.getItem("user"));
     return (user !== null && user.emailVerified !== false) ? true : false;
   }
   // Sign in with Google
@@ -85,7 +85,7 @@ export class AuthService {
     return this.afAuth.auth.signInWithPopup(provider)
       .then((result) => {
         this.ngZone.run(() => {
-          this.router.navigate(['dashboard']);
+          this.router.navigate(["dashboard"]);
         });
         this.SetUserData(result.user);
       }).catch((error) => {
@@ -111,14 +111,14 @@ export class AuthService {
   // Sign out
   SignOut() {
     return this.afAuth.auth.signOut().then(() => {
-      localStorage.removeItem('user');
+      localStorage.removeItem("user");
       this.isUserLoggedIn = false;
-      this.router.navigate(['home']);
+      this.router.navigate(["home"]);
     });
   }
 
   isAuthenticated(): boolean {
-    if (localStorage.get('isLoggedIn')) {
+    if (localStorage.get("isLoggedIn")) {
       return true;
     } else {
       return false;

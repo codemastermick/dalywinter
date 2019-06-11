@@ -1,10 +1,10 @@
-import { NgModule } from '@angular/core';
-import { CommonModule } from '@angular/common';
+import { NgModule } from "@angular/core";
+import { CommonModule } from "@angular/common";
 
-import { PartnerProvidersRoutingModule } from './partner-providers-routing.module';
-import { PartnerProvidersComponent } from './partner-providers.component';
-import { MaterialModule } from '../../material/material.module';
-import { FlexLayoutModule } from '@angular/flex-layout';
+import { PartnerProvidersRoutingModule } from "./partner-providers-routing.module";
+import { PartnerProvidersComponent } from "./partner-providers.component";
+import { MaterialModule } from "../../material/material.module";
+import { FlexLayoutModule } from "@angular/flex-layout";
 
 @NgModule({
   imports: [
