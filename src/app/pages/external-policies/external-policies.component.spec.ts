@@ -1,6 +1,8 @@
 import { async, ComponentFixture, TestBed } from "@angular/core/testing";
 
 import { ExternalPoliciesComponent } from "./external-policies.component";
+import { MaterialModule } from "src/app/material/material.module";
+import { PolciesRoutingModule } from "./external-policies-routing.module";
 
 describe("ExternalPoliciesComponent", () => {
   let component: ExternalPoliciesComponent;
@@ -8,9 +10,9 @@ describe("ExternalPoliciesComponent", () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ ExternalPoliciesComponent ]
-    })
-    .compileComponents();
+      declarations: [ExternalPoliciesComponent],
+      imports: [MaterialModule, PolciesRoutingModule]
+    }).compileComponents();
   }));
 
   beforeEach(() => {

@@ -7,7 +7,6 @@ import { AuthService } from "../../shared/auth.service";
   styleUrls: ["./header.component.scss"]
 })
 export class HeaderComponent implements OnInit {
-  @Input() title = "ngFAST"; // This gets set from app.component.ts
   @Output() public sidenavToggle = new EventEmitter();
 
   constructor(public authService: AuthService) {}

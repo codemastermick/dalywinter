@@ -2,6 +2,11 @@ import { async, ComponentFixture, TestBed } from "@angular/core/testing";
 import { HeaderComponent } from "./header.component";
 import { MaterialModule } from "src/app/material/material.module";
 import { By } from "@angular/platform-browser";
+import { AngularFirestore } from "@angular/fire/firestore";
+import { AngularFireModule } from "@angular/fire";
+import { firebaseConfig } from "src/app/firebaseconfig";
+import { AngularFireAuth } from "@angular/fire/auth";
+import { RouterTestingModule } from "@angular/router/testing";
 
 describe("HeaderComponent", () => {
   let component: HeaderComponent;
@@ -9,8 +14,13 @@ describe("HeaderComponent", () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      imports: [MaterialModule],
-      declarations: [HeaderComponent]
+      imports: [
+        MaterialModule,
+        AngularFireModule.initializeApp(firebaseConfig),
+        RouterTestingModule
+      ],
+      declarations: [HeaderComponent],
+      providers: [AngularFirestore, AngularFireAuth]
     }).compileComponents();
   }));
 
@@ -22,17 +32,5 @@ describe("HeaderComponent", () => {
 
   it("should create", () => {
     expect(component).toBeTruthy();
-  });
-
-  it(`should have title`, () => {
-    const app = fixture.debugElement.componentInstance;
-    expect(app.title).not.toBeNull();
-  });
-
-  it("should render title in a mat-toolbar-row tag", () => {
-    fixture.detectChanges();
-    const toolbar = fixture.debugElement.query(By.css("mat-toolbar"));
-    const selectedElement = toolbar.query(By.css("mat-toolbar-row"));
-    expect(selectedElement.nativeElement.textContent).toContain("ngFAST");
   });
 });

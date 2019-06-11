@@ -1,6 +1,8 @@
 import { async, ComponentFixture, TestBed } from "@angular/core/testing";
 
 import { ContactComponent } from "./contact.component";
+import { MaterialModule } from "src/app/material/material.module";
+import { ContactRoutingModule } from "./contact-routing.module";
 
 describe("ContactComponent", () => {
   let component: ContactComponent;
@@ -8,9 +10,9 @@ describe("ContactComponent", () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ ContactComponent ]
-    })
-    .compileComponents();
+      declarations: [ContactComponent],
+      imports: [MaterialModule, ContactRoutingModule]
+    }).compileComponents();
   }));
 
   beforeEach(() => {
