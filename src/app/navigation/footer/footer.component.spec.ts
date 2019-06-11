@@ -38,11 +38,4 @@ describe("FooterComponent", () => {
     const app = fixture.debugElement.componentInstance;
     expect(app.datestamp).not.toBeNull();
   });
-
-  it(`getRange should not be null`, () => {
-    const app = fixture.debugElement.componentInstance;
-    spyOn(app, "getRange");
-    fixture.detectChanges();
-    expect(app.getRange()).not.toBeNull();
-  });
 });
