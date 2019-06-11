@@ -8,6 +8,14 @@ import { ServiceWorkerModule } from "@angular/service-worker";
 import { environment } from "../environments/environment";
 import { RouterModule } from "@angular/router";
 import { NavigationModule } from "./navigation/navigation.module";
+import { ToastrModule } from "ngx-toastr";
+import { AuthService } from "./shared/auth.service";
+
+import { AngularFireModule } from "@angular/fire";
+import { AngularFireAuthModule } from "@angular/fire/auth";
+import { AngularFirestoreModule } from "@angular/fire/firestore";
+import { firebaseConfig } from "./firebaseconfig";
+import { FlexLayoutModule } from '@angular/flex-layout';
 
 @NgModule({
   declarations: [AppComponent],
@@ -20,9 +28,20 @@ import { NavigationModule } from "./navigation/navigation.module";
       enabled: environment.production
     }),
     RouterModule,
-    NavigationModule
+    NavigationModule,
+    ToastrModule.forRoot({
+      positionClass: "toast-bottom-full-width",
+      preventDuplicates: true,
+      timeOut: 10000,
+      closeButton: true,
+      extendedTimeOut: 5000
+    }),
+    AngularFireModule.initializeApp(firebaseConfig),
+    AngularFirestoreModule,
+    AngularFireAuthModule,
+    FlexLayoutModule
   ],
-  providers: [],
+  providers: [AuthService, AngularFirestoreModule],
   bootstrap: [AppComponent]
 })
 export class AppModule {}
