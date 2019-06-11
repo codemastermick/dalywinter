@@ -8,13 +8,13 @@ describe("PartnerProvidersComponent", () => {
   let component: PartnerProvidersComponent;
   let fixture: ComponentFixture<PartnerProvidersComponent>;
 
-  beforeEach(async(() => {
+  beforeEach(() => {
     TestBed.configureTestingModule({
       declarations: [ PartnerProvidersComponent ],
       imports: [MaterialModule, PartnerProvidersRoutingModule]
     })
     .compileComponents();
-  }));
+  });
 
   beforeEach(() => {
     fixture = TestBed.createComponent(PartnerProvidersComponent);
