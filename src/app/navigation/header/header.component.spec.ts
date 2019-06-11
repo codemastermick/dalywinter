@@ -7,10 +7,13 @@ import { AngularFireModule } from "@angular/fire";
 import { firebaseConfig } from "src/app/firebaseconfig";
 import { AngularFireAuth } from "@angular/fire/auth";
 import { RouterTestingModule } from "@angular/router/testing";
+import { SidenavListComponent } from "../sidenav-list/sidenav-list.component";
 
 describe("HeaderComponent", () => {
   let component: HeaderComponent;
   let fixture: ComponentFixture<HeaderComponent>;
+  let sidenav: SidenavListComponent;
+  let spy: any;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
@@ -27,10 +30,17 @@ describe("HeaderComponent", () => {
   beforeEach(() => {
     fixture = TestBed.createComponent(HeaderComponent);
     component = fixture.componentInstance;
+    sidenav = new SidenavListComponent();
     fixture.detectChanges();
   });
 
   it("should create", () => {
     expect(component).toBeTruthy();
+  });
+
+  it("should toggle sidenav", () => {
+    spy = spyOn(component, "onToggleSidenav");
+    component.onToggleSidenav();
+    expect(spy).toHaveBeenCalled();
   });
 });
