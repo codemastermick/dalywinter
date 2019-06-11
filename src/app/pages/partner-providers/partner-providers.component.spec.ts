@@ -1,8 +1,8 @@
 import { async, ComponentFixture, TestBed } from "@angular/core/testing";
 
 import { PartnerProvidersComponent } from "./partner-providers.component";
-import { MaterialModule } from 'src/app/material/material.module';
-import { PartnerProvidersRoutingModule } from './partner-providers-routing.module';
+import { MaterialModule } from "src/app/material/material.module";
+import { PartnerProvidersRoutingModule } from "./partner-providers-routing.module";
 
 describe("PartnerProvidersComponent", () => {
   let component: PartnerProvidersComponent;
@@ -11,7 +11,7 @@ describe("PartnerProvidersComponent", () => {
   beforeEach(async(() => {
     TestBed.configureTestingModule({
       declarations: [ PartnerProvidersComponent ],
-      imports: [MaterialModule,PartnerProvidersRoutingModule]
+      imports: [MaterialModule, PartnerProvidersRoutingModule]
     })
     .compileComponents();
   }));
