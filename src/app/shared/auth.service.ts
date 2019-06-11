@@ -4,6 +4,7 @@ import { auth } from "firebase/app";
 import { AngularFireAuth } from "@angular/fire/auth";
 import { AngularFirestore, AngularFirestoreDocument } from "@angular/fire/firestore";
 import { Router } from "@angular/router";
+import { Observable, of } from 'rxjs';
 @Injectable({
   providedIn: "root"
 })
@@ -117,11 +118,11 @@ export class AuthService {
     });
   }
 
-  isAuthenticated(): boolean {
+  isAuthenticated(): Observable<boolean> {
     if (localStorage.get("isLoggedIn")) {
-      return true;
+      return of(true);
     } else {
-      return false;
+      return of(false);
     }
   }
 }
