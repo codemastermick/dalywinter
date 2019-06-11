@@ -6,6 +6,7 @@ import { MaterialModule } from "src/app/material/material.module";
 describe("SidenavListComponent", () => {
   let component: SidenavListComponent;
   let fixture: ComponentFixture<SidenavListComponent>;
+  let spy: any;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
@@ -22,5 +23,11 @@ describe("SidenavListComponent", () => {
 
   it("should create", () => {
     expect(component).toBeTruthy();
+  });
+
+  it("should toggle sidenav", () => {
+    spy = spyOn(component, "onSidenavClose");
+    component.onSidenavClose();
+    expect(spy).toHaveBeenCalled();
   });
 });
