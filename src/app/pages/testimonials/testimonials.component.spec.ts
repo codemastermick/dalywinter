@@ -33,7 +33,7 @@ describe("TestimonialsComponent", () => {
     expect(component).toBeTruthy();
   });
 
-  it("should have testimonial content", async(() => {
+  it("should have testimonial content", () => {
     expect(component.testimonials).not.toBeUndefined();
-  }));
+  });
 });
