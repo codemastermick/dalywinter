@@ -9,7 +9,6 @@ import { environment } from "../environments/environment";
 import { RouterModule } from "@angular/router";
 import { NavigationModule } from "./navigation/navigation.module";
 import { ToastrModule } from "ngx-toastr";
-import { AuthService } from "./shared/auth.service";
 
 import { AngularFireModule } from "@angular/fire";
 import { AngularFireAuthModule } from "@angular/fire/auth";
@@ -41,7 +40,7 @@ import { FlexLayoutModule } from "@angular/flex-layout";
     AngularFireAuthModule,
     FlexLayoutModule
   ],
-  providers: [AuthService, AngularFirestoreModule],
+  providers: [AngularFirestoreModule],
   bootstrap: [AppComponent]
 })
 export class AppModule {}

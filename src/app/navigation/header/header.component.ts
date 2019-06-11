@@ -1,5 +1,4 @@
 import { Component, OnInit, Output, EventEmitter, Input } from "@angular/core";
-import { AuthService } from "../../shared/auth.service";
 
 @Component({
   selector: "app-header",
@@ -9,7 +8,7 @@ import { AuthService } from "../../shared/auth.service";
 export class HeaderComponent implements OnInit {
   @Output() public sidenavToggle = new EventEmitter();
 
-  constructor(public authService: AuthService) {}
+  constructor() {}
 
   ngOnInit() {}
 
