@@ -39,8 +39,9 @@ describe("HeaderComponent", () => {
   });
 
   it("should toggle sidenav", () => {
-    spy = spyOn(component, "onToggleSidenav");
+    spy = spyOn(component.sidenavToggle, "emit");
     component.onToggleSidenav();
+    fixture.detectChanges();
     expect(spy).toHaveBeenCalled();
   });
 });
