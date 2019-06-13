@@ -33,6 +33,10 @@ describe("TestimonialsComponent", () => {
     expect(component).toBeTruthy();
   });
 
+  it("should have testimonial collection", () => {
+    expect(component.testimonialsCollection).not.toBeUndefined();
+  });
+
   it("should have testimonial content", () => {
     expect(component.testimonials).not.toBeUndefined();
   });
