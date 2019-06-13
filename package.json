@@ -13,7 +13,6 @@
     "build:ssr": "npm run build:client-and-server-bundles && npm run compile:server",
     "build:client-and-server-bundles": "ng build --prod && ng run ngFast-pwa:server:production",
     "test:coverage": "ng test --watch false --browsers ChromeHeadless --code-coverage",
-    "test-with-coverage": "cat ./coverage/ngFast-pwa/lcov.info | codacy-coverage --accountToken 4bqZemigGvivqFqD06bX --username codemastermick --projectName dalywinter-v2",
     "next-update": "next-update -k true --tldr"
   },
   "private": true,
