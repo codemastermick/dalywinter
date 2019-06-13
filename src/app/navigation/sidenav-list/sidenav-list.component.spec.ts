@@ -26,8 +26,9 @@ describe("SidenavListComponent", () => {
   });
 
   it("should toggle sidenav", () => {
-    spy = spyOn(component, "onSidenavClose");
+    spy = spyOn(component.sidenavClose, "emit");
     component.onSidenavClose();
+    fixture.detectChanges();
     expect(spy).toHaveBeenCalled();
   });
 });
