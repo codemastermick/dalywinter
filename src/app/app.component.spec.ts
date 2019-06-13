@@ -55,4 +55,13 @@ describe("AppComponent", () => {
     const app = fixture.debugElement.componentInstance;
     expect(app.author).not.toBeNull();
   });
+
+  it(`should display toast notification`, () => {
+    const fixture = TestBed.createComponent(AppComponent);
+    const app = fixture.debugElement.componentInstance;
+    const spy = spyOn(app, "showNotification");
+    app.showNotification();
+    fixture.detectChanges();
+    expect(spy).toHaveBeenCalled();
+  });
 });
