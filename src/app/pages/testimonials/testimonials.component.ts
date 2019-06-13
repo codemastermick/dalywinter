@@ -22,9 +22,6 @@ interface Testimonial extends Testimonials {
   styleUrls: ["./testimonials.component.scss"]
 })
 export class TestimonialsComponent implements OnInit {
-  author: string;
-  position: string;
-  description: string;
   testimonialsCollection: AngularFirestoreCollection<Testimonials>;
   testimonials: any;
 
