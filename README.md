@@ -5,7 +5,7 @@
 [![codecov](https://codecov.io/gh/codemastermick/dalywinter-v2/branch/master/graph/badge.svg)](https://codecov.io/gh/codemastermick/dalywinter-v2)
 [![David](https://img.shields.io/david/codemastermick/dalywinter-v2.svg)](https://david-dm.org/codemastermick/dalywinter-v2)
 [![GitHub issues](https://img.shields.io/github/issues/codemastermick/dalywinter-v2.svg)](https://github.com/codemastermick/dalywinter-v2/issues)
-[![Website](https://img.shields.io/website/http/dalywinter.com.svg?down_color=red&down_message=offline&up_color=green&up_message=online)](http://dalywinter.com)
+[![Website](https://img.shields.io/website/http/dalywinter.com.svg?down_color=red&down_message=offline&up_color=green&up_message=online)](http://dalywinter.com) [![Greenkeeper badge](https://badges.greenkeeper.io/codemastermick/dalywinter-v2.svg)](https://greenkeeper.io/)
 
 Code repository for the Daly Winter & Associates LLP public website located at [Daly Winter](https://dalywinter.com)
 
