@@ -1,4 +1,4 @@
-<div *ngIf="testimonials | async; else elseBlock">
+<div *ngIf="(testimonials | async |json); else elseBlock">
   <p class="outside-card">Customer Testimonials</p>
   <ul style="list-style: none">
     <li *ngFor="let t of testimonials | async">
