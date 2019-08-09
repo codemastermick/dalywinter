@@ -12,7 +12,7 @@ interface Testimonials {
   done: boolean;
 }
 
-interface Testimonial extends Testimonials {
+export interface Testimonial extends Testimonials {
   id: string;
 }
 
