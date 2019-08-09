@@ -5,6 +5,7 @@ import {
   AngularFirestoreCollection,
   AngularFirestoreDocument
 } from "@angular/fire/firestore";
+import { TestimonialsService } from 'app/shared/testimonials.service';
 
 interface Testimonials {
   author: string;
@@ -22,13 +23,11 @@ export interface Testimonial extends Testimonials {
   styleUrls: ["./testimonials.component.scss"]
 })
 export class TestimonialsComponent implements OnInit {
-  testimonialsCollection: AngularFirestoreCollection<Testimonials>;
   testimonials: any;
 
-  constructor(private afs: AngularFirestore) {}
+  constructor(private testDB: TestimonialsService) { }
 
   ngOnInit() {
-    this.testimonialsCollection = this.afs.collection("testimonials");
-    this.testimonials = this.testimonialsCollection.valueChanges();
+    this.testimonials = this.testDB.getTestimonials();
   }
 }
