@@ -51,5 +51,6 @@ describe("TestimonialsComponent", () => {
 
   it("should return a testimonial", () => {
     expect((component.testimonials as Testimonial).author).toBe(input.author);
+    expect((component.testimonials as Testimonial).description).toBe(input.description);
   });
 });
