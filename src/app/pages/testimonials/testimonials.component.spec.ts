@@ -40,4 +40,8 @@ describe("TestimonialsComponent", () => {
   it("should have testimonial content", () => {
     expect(component.testimonials).not.toBeUndefined();
   });
+
+  it("should return a testimonial", () => {
+    expect(component.testimonials)
+  });
 });

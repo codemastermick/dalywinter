@@ -1,10 +1,10 @@
 import { async, ComponentFixture, TestBed } from "@angular/core/testing";
 import { HeaderComponent } from "./header.component";
-import { MaterialModule } from "src/app/material/material.module";
+import { MaterialModule } from "app/material/material.module";
 import { By } from "@angular/platform-browser";
 import { AngularFirestore } from "@angular/fire/firestore";
 import { AngularFireModule } from "@angular/fire";
-import { firebaseConfig } from "src/app/firebaseconfig";
+import { firebaseConfig } from "app/firebaseconfig";
 import { AngularFireAuth } from "@angular/fire/auth";
 import { RouterTestingModule } from "@angular/router/testing";
 import { SidenavListComponent } from "../sidenav-list/sidenav-list.component";

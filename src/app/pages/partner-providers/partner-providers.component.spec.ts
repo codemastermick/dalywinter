@@ -1,7 +1,7 @@
 import { async, ComponentFixture, TestBed } from "@angular/core/testing";
 
 import { PartnerProvidersComponent } from "./partner-providers.component";
-import { MaterialModule } from "src/app/material/material.module";
+import { MaterialModule } from "app/material/material.module";
 import { PartnerProvidersRoutingModule } from "./partner-providers-routing.module";
 
 describe("PartnerProvidersComponent", () => {
