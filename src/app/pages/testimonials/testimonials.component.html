@@ -1,7 +1,7 @@
 <!-- {{testimonials|async|json}} -->
 <div *ngIf="(testimonials | async|json)?.length>0; else elseBlock">
   <p class="outside-card">Customer Testimonials</p>
-  <ul>
+  <ul style="list-style: none">
       <li *ngFor="let t of testimonials | async">
         <mat-card>
           <mat-card-header>
