@@ -1,10 +1,4 @@
-import { map } from "rxjs/operators";
 import { Component, OnInit } from "@angular/core";
-import {
-  AngularFirestore,
-  AngularFirestoreCollection,
-  AngularFirestoreDocument
-} from "@angular/fire/firestore";
 import { TestimonialsService } from "app/shared/testimonials.service";
 
 interface Testimonials {
