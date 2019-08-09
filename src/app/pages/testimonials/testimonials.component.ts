@@ -29,14 +29,6 @@ export class TestimonialsComponent implements OnInit {
 
   ngOnInit() {
     this.testimonialsCollection = this.afs.collection("testimonials");
-    this.testimonials = this.testimonialsCollection.snapshotChanges().pipe(
-      map(actions => {
-        return actions.map(a => {
-          const data = a.payload.doc.data() as Testimonial;
-          const id = a.payload.doc.id;
-          return { id, data };
-        });
-      })
-    );
+    this.testimonials = this.testimonialsCollection.valueChanges();
   }
 }
