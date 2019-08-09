@@ -41,7 +41,7 @@ describe("TestimonialsComponent", () => {
     expect(component.testimonials).not.toBeUndefined();
   });
 
-  it("should return a testimonial", () => {
-    expect(component.testimonials)
-  });
+  // it("should return a testimonial", () => {
+  //   expect((component.testimonials as Testimonial).author).toBe(input.author);
+  // });
 });
