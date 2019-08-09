@@ -7,14 +7,16 @@ branches:
     - /^greenkeeper/.*$/
 install:
   - npm install -g istanbul
-before_script:
   - npm install -g @angular/cli
-script:
+before_script:
   - npm install
+script:
+  - echo "Beginning build and test cycle"
   - npm run lint
-  - npm run test:coverage
   - npm run build:ssr
+  - npm run test:coverage
 after_success:
+  - echo "Uploading coverage reports"
   - bash <(curl -s https://codecov.io/bash)
 deploy:
   skip_cleanup: true
