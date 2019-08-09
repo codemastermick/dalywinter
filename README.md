@@ -12,9 +12,11 @@ Code repository for the Daly Winter & Associates LLP public website located at [
 This repo is integrated with Travis, where it is automatically tested for quality and coverage before being deployed to the staging site located on Firebase.
 
 ## Build Pipeline
+
 1. Commit code to GitHub
 2. Travis ensures all files pass linting
 3. Travis builds the application
 4. Travis runs all included tests with coverage reports
 5. Travis uploads the coverage reports to CodeCov
 6. Travis deploys the application to Firebase
+
