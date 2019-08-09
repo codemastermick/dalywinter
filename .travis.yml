@@ -5,7 +5,7 @@ branches:
   only:
     - master
     - /^greenkeeper/.*$/
-    - ^feat-
+    - ^feat-.*$/
 install:
   - npm install -g istanbul
   - npm install -g @angular/cli
