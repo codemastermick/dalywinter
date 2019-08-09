@@ -1,5 +1,5 @@
 <!-- {{testimonials|async|json}} -->
-<div *ngIf="(testimonials | async|json)?.length>0; else elseBlock">
+<div *ngIf="(testimonials | async)?.length>0; else elseBlock">
   <p class="outside-card">Customer Testimonials</p>
   <ul style="list-style: none">
       <li *ngFor="let t of testimonials | async">
@@ -19,4 +19,5 @@
       </li>
     </ul>
 </div>
+<!-- Once we have our first testimonials come in, change the below text to LOADING -->
 <ng-template #elseBlock><p class="outside-card">UNDER CONSTRUCTION</p></ng-template>
