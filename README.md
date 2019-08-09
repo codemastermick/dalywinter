@@ -13,22 +13,22 @@ This repo is integrated with Travis, where it is automatically tested for qualit
 
 ## Getting Started
 
-1. Clone this repository locally
-2. Move into the project directory with `cd dalywinter-v2` 
-3. Run `git checkout -b feat:<FEATURENAME>` to create a local feature branch **NOTE: The prefix feat: is required for Travis to pick up your work**
-4. Use `npm start` to start up the development server
-5. Start working on the code
-6. When happy with changes, push to GitHub
-7. When finished your feature, submit a PR to merge the branch into master
+1.  Clone this repository locally
+2.  Move into the project directory with `cd dalywinter-v2` 
+3.  Run `git checkout -b feat:<FEATURENAME>` to create a local feature branch **NOTE: The prefix feat: is required for Travis to pick up your work**
+4.  Use `npm start` to start up the development server
+5.  Start working on the code
+6.  When happy with changes, push to GitHub
+7.  When finished your feature, submit a PR to merge the branch into master
 
 ## Build Pipeline
 
-1. Commit code to GitHub
-2. Travis ensures all files pass linting
-3. Travis builds the application
-4. Travis runs all included tests with coverage reports
-5. Travis uploads the coverage reports to CodeCov
-6. Travis deploys the application to Firebase
+1.  Commit code to GitHub
+2.  Travis ensures all files pass linting
+3.  Travis builds the application
+4.  Travis runs all included tests with coverage reports
+5.  Travis uploads the coverage reports to CodeCov
+6.  Travis deploys the application to Firebase
 
 ## Additional Notes
 
