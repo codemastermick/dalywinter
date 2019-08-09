@@ -5,7 +5,7 @@ import {
   AngularFirestoreCollection,
   AngularFirestoreDocument
 } from "@angular/fire/firestore";
-import { TestimonialsService } from 'app/shared/testimonials.service';
+import { TestimonialsService } from "app/shared/testimonials.service";
 
 interface Testimonials {
   author: string;
