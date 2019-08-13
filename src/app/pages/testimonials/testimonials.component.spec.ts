@@ -12,9 +12,9 @@ describe("TestimonialsComponent", () => {
   let fixture: ComponentFixture<TestimonialsComponent>;
 
   const input: Testimonial = {
-    id: "8h932iwrh89023hr",
     author: "Demo Bob",
     description: "A demo testimonial",
+    position: "CEO at nowhere",
     done: false
   };
 

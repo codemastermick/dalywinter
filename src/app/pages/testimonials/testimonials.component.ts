@@ -1,13 +1,14 @@
 import { Component, OnInit } from "@angular/core";
 import { TestimonialsService } from "app/shared/testimonials.service";
 
-interface Testimonials {
+export interface Testimonial {
   author: string;
   description: string;
+  position: string;
   done: boolean;
 }
 
-export interface Testimonial extends Testimonials {
+export interface TestimonialWithID extends Testimonial {
   id: string;
 }
 
