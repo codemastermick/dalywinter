@@ -51,4 +51,14 @@ describe("TestimonialsService", () => {
     const service: TestimonialsService = TestBed.get(TestimonialsService);
     expect(service).toBeTruthy();
   });
+
+  it("should have a testimonial with the correct data", () => {
+    const service: TestimonialsService = TestBed.get(TestimonialsService);
+    service.testimonials.subscribe((t: TestimonialWithID[]) => {
+      expect(t[0].id === "hn9324rh8f2");
+      expect(t[0].author === "Demo Bob");
+      expect(t[0].description === "Hello world");
+      expect(t[0].position === "CEO of nothing");
+    });
+  });
 });
