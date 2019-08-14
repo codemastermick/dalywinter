@@ -10,6 +10,9 @@ import { BrowserAnimationsModule } from "@angular/platform-browser/animations";
 import { AngularFirestore } from "@angular/fire/firestore";
 import { AngularFireAuth } from "@angular/fire/auth";
 
+let fixture;
+let app;
+
 describe("AppComponent", () => {
   beforeEach(async(() => {
     TestBed.configureTestingModule({
@@ -30,35 +33,27 @@ describe("AppComponent", () => {
       declarations: [AppComponent],
       providers: [AngularFirestore, AngularFireAuth]
     }).compileComponents();
+    fixture = TestBed.createComponent(AppComponent);
+    app = fixture.debugElement.componentInstance;
   }));
 
   it("should create the app", () => {
-    const fixture = TestBed.createComponent(AppComponent);
-    const app = fixture.debugElement.componentInstance;
     expect(app).toBeTruthy();
   });
 
   it(`should have as title 'Daly Winter & Associates LLP'`, () => {
-    const fixture = TestBed.createComponent(AppComponent);
-    const app = fixture.debugElement.componentInstance;
     expect(app.title).toEqual("Daly Winter & Associates LLP");
   });
 
   it(`should have founding year`, () => {
-    const fixture = TestBed.createComponent(AppComponent);
-    const app = fixture.debugElement.componentInstance;
     expect(app.foundingYear).not.toBeNull();
   });
 
   it(`should have author`, () => {
-    const fixture = TestBed.createComponent(AppComponent);
-    const app = fixture.debugElement.componentInstance;
     expect(app.author).not.toBeNull();
   });
 
   it(`should display toast notification`, () => {
-    const fixture = TestBed.createComponent(AppComponent);
-    const app = fixture.debugElement.componentInstance;
     const spy = spyOn(app, "showNotification");
     app.showNotification();
     fixture.detectChanges();
