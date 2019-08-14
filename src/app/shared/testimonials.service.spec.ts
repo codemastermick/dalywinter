@@ -4,6 +4,7 @@ import { TestimonialsService } from "./testimonials.service";
 import { Testimonial, TestimonialWithID } from "app/pages/testimonials/testimonials.component";
 import { AngularFirestore, AngularFirestoreCollection } from "@angular/fire/firestore";
 import { BehaviorSubject, Observable, from } from "rxjs";
+import { map } from 'rxjs/operators';
 
 // const FirestoreStub = {
 //   testimonials: {
@@ -52,13 +53,16 @@ describe("TestimonialsService", () => {
     expect(service).toBeTruthy();
   });
 
-  it("should have a testimonial with the correct data", () => {
+  it("should have a testimonial with the correct data", async () => {
     const service: TestimonialsService = TestBed.get(TestimonialsService);
-    service.testimonials.subscribe((t: TestimonialWithID[]) => {
-      expect(t[0].id === "hn9324rh8f2");
-      expect(t[0].author === "Demo Bob");
-      expect(t[0].description === "Hello world");
-      expect(t[0].position === "CEO of nothing");
+    let t;
+    const result = await service.getTestimonials().subscribe((testimonial: TestimonialWithID[]) => {
+      t = JSON.stringify(testimonial);
     });
+    expect(result).toBeTruthy();
+    expect(t.id === "hn9324rh8f2");
+    expect(t.author === "Demo Bob");
+    expect(t.description === "Hello world");
+    expect(t.position === "CEO of nothing");
   });
 });
