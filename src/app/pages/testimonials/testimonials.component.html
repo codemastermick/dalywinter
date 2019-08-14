@@ -1,23 +1,21 @@
-<!-- {{testimonials|async|json}} -->
-<div *ngIf="(testimonials | async)?.length>0; else elseBlock">
+<div *ngIf="(testimonials | async |json); else elseBlock">
   <p class="outside-card">Customer Testimonials</p>
   <ul style="list-style: none">
-      <li *ngFor="let t of testimonials | async">
-        <mat-card>
-          <mat-card-header>
-            <mat-card-title>
-              <b [class.done]="t.done">{{t.author}}</b>
-            </mat-card-title>
-            <mat-card-subtitle>
-              <b [class.done]="t.done">{{t.position}}</b>
-            </mat-card-subtitle>
-          </mat-card-header>
-          <mat-card-content>
-            <b [class.done]="t.done">{{t.description}}</b>
-          </mat-card-content>
-        </mat-card>
-      </li>
-    </ul>
+    <li *ngFor="let t of testimonials | async">
+      <mat-card>
+        <mat-card-header>
+          <mat-card-title>
+            <b [class.done]="t.done">{{ t.author }}</b>
+          </mat-card-title>
+          <mat-card-subtitle>
+            <b [class.done]="t.done">{{ t.position }}</b>
+          </mat-card-subtitle>
+        </mat-card-header>
+        <mat-card-content>
+          <b [class.done]="t.done">{{ t.description }}</b>
+        </mat-card-content>
+      </mat-card>
+    </li>
+  </ul>
 </div>
-<!-- Once we have our first testimonials come in, change the below text to LOADING -->
-<ng-template #elseBlock><p class="outside-card">UNDER CONSTRUCTION</p></ng-template>
+<ng-template #elseBlock><p class="outside-card">Loading</p></ng-template>

@@ -8,7 +8,7 @@ branches:
   only:
     - master
     - /^greenkeeper/.*$/
-    - ^feat-.*$/
+    - /^feat-.*$/
 install:
   - npm install -g istanbul
   - npm install -g @angular/cli
@@ -16,8 +16,8 @@ before_script:
   - npm install
 script:
   - echo "Beginning build and test cycle"
-  - npm run lint
-  - npm run build:ssr
+  - npm run lint || travis_terminate 1
+  - npm run build:ssr || travis_terminate 1
   - npm run test:coverage
 after_success:
   - echo "Uploading coverage reports"

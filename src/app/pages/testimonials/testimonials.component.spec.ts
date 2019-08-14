@@ -12,9 +12,9 @@ describe("TestimonialsComponent", () => {
   let fixture: ComponentFixture<TestimonialsComponent>;
 
   const input: Testimonial = {
-    id: "8h932iwrh89023hr",
     author: "Demo Bob",
     description: "A demo testimonial",
+    position: "CEO at nowhere",
     done: false
   };
 
@@ -39,10 +39,6 @@ describe("TestimonialsComponent", () => {
 
   it("should create", () => {
     expect(component).toBeTruthy();
-  });
-
-  it("should have testimonial collection", () => {
-    expect(component.testimonialsCollection).not.toBeUndefined();
   });
 
   it("should have testimonial content", () => {

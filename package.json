@@ -10,6 +10,7 @@
     "e2e": "ng e2e",
     "compile:server": "webpack --config webpack.server.config.js --progress --colors",
     "serve:ssr": "node dist/server",
+    "build": "npm run lint:all && npm run build:ssr",
     "build:ssr": "npm run build:client-and-server-bundles && npm run compile:server",
     "build:client-and-server-bundles": "ng build --prod && ng run ngFast-pwa:server:production",
     "test:coverage": "ng test --watch false --browsers ChromeHeadless --code-coverage",
