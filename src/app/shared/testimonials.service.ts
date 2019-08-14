@@ -1,13 +1,14 @@
 import { Injectable } from "@angular/core";
 import { AngularFirestore, AngularFirestoreCollection } from "@angular/fire/firestore";
 import { TestimonialWithID } from "app/pages/testimonials/testimonials.component";
+import { Observable } from "rxjs";
 
 @Injectable({
   providedIn: "root"
 })
 export class TestimonialsService {
   collection: AngularFirestoreCollection<TestimonialWithID>;
-  testimonials: any;
+  testimonials: Observable<TestimonialWithID[]>;
 
 
   constructor(private db: AngularFirestore) {
