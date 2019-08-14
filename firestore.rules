@@ -1,7 +1,18 @@
 service cloud.firestore {
+	function validAccount(userEmail){                              // Checks for valid domain
+		return userEmail.split('@')[1] == 'dalywinter.com';
+	}
+
   match /databases/{database}/documents {
-    match /{document=**} {
-      allow read, write;
+    match /{document=**} {                                       // Global rules
+      allow read:if false;                                       // Public read access disabled
+    }
+    match /users/{user}{                                         // User data
+    allow read, write:if validAccount(request.auth.token.email); // Only authorized users can read/write userdata
+    }
+    match /testimonials/{testimonial}{                           // Testimonial data
+    allow read; 																								 // Anyone can read the testimonials
+    allow write:if validAccount(request.auth.token.email);       // Only organization members can write testimonials
     }
   }
 }
