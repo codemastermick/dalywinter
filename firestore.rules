@@ -8,7 +8,7 @@ service cloud.firestore {
       allow read:if false;                                       // Public read access disabled
     }
     match /users/{user}{                                         // User data
-    allow read, write:if validAccount(request.auth.token.email); // Only authorized users can read/write userdata
+    allow read, write:if validAccount(request.auth.token.email) && user == request.auth.uid; // Only authorized users can read/write userdata
     }
     match /testimonials/{testimonial}{                           // Testimonial data
     allow read; 																								 // Anyone can read the testimonials
