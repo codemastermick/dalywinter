@@ -15,6 +15,7 @@ import { AngularFireAuthModule } from "@angular/fire/auth";
 import { AngularFirestoreModule } from "@angular/fire/firestore";
 import { firebaseConfig } from "./firebaseconfig";
 import { FlexLayoutModule } from "@angular/flex-layout";
+import { TestimonialsService } from "./shared/testimonials.service";
 
 @NgModule({
   declarations: [AppComponent],
@@ -40,7 +41,7 @@ import { FlexLayoutModule } from "@angular/flex-layout";
     AngularFireAuthModule,
     FlexLayoutModule
   ],
-  providers: [AngularFirestoreModule],
+  providers: [AngularFirestoreModule, TestimonialsService],
   bootstrap: [AppComponent]
 })
-export class AppModule {}
+export class AppModule { }
