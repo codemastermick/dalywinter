@@ -58,5 +58,3 @@ AddOutputFilterByType DEFLATE application/x-javascript
 Header set X-XSS-Protection "1; mode=block"
 # MIME type protection
 Header set X-Content-Type-Options nosniff
-# Disable server signature
-ServerSignature Off
