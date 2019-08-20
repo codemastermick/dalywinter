@@ -47,10 +47,11 @@
 body,
 html {
   margin: 0;
-  height: 80vh;
-  width: 100vw;
+  height: 100%;
+  width: 100%;
   background-color: black;
   font-family: "Neuton", serif;
+  // overflow-y: initial;
 }
 
 .outside-card {

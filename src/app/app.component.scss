@@ -1,6 +1,6 @@
-.container {
-  min-height: 80vh;
-}
+// .container {
+//   min-height: 80vh;
+// }
 
 h1 {
   font-size: 2.5em;
@@ -9,7 +9,7 @@ h1 {
 mat-sidenav-container,
 mat-sidenav-content,
 mat-sidenav {
-  height: 100vh;
+  height: 100%;
 }
 
 mat-sidenav {
@@ -28,13 +28,14 @@ mat-sidenav {
 
 .bgimg {
   display: block;
-  height: 80vh;
+  height: 80%;
   background: url("../assets/img/background.webp") no-repeat center center fixed;
   background-size: cover;
 }
 
 .mainpage {
-  height: 80vh;
+  height: 100%;
+  overflow: auto;
 }
 
 .toast-container{
