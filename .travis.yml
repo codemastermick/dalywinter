@@ -14,6 +14,7 @@ install:
   - npm install -g @angular/cli
 before_script:
   - npm install
+  - cd functions && npm install && cd ..
 script:
   - echo "Beginning build and test cycle"
   - npm run lint || travis_terminate 1
