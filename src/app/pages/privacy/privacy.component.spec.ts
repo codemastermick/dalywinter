@@ -1,7 +1,7 @@
 import { async, ComponentFixture, TestBed } from "@angular/core/testing";
 
 import { PrivacyComponent } from "./privacy.component";
-import { MaterialModule } from "app/material/material.module";
+import { MaterialModule } from "app/shared/material.module";
 import { PrivacyRoutingModule } from "./privacy-routing.module";
 import { RouterTestingModule } from "@angular/router/testing";
 

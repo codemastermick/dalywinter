@@ -3,7 +3,7 @@ import { CommonModule } from "@angular/common";
 
 import { ContactRoutingModule } from "./contact-routing.module";
 import { ContactComponent } from "./contact.component";
-import { MaterialModule } from "../../material/material.module";
+import { MaterialModule } from "../../shared/material.module";
 
 @NgModule({
   imports: [CommonModule, ContactRoutingModule, MaterialModule],

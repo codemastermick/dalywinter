@@ -2,7 +2,7 @@ import { TestBed, async } from "@angular/core/testing";
 import { RouterTestingModule } from "@angular/router/testing";
 import { AppComponent } from "./app.component";
 import { NavigationModule } from "./navigation/navigation.module";
-import { MaterialModule } from "./material/material.module";
+import { MaterialModule } from "./shared/material.module";
 import { ToastrModule } from "ngx-toastr";
 import { AngularFireModule } from "@angular/fire";
 import { firebaseConfig } from "./firebaseconfig";

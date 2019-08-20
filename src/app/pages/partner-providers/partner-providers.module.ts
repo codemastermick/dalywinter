@@ -3,7 +3,7 @@ import { CommonModule } from "@angular/common";
 
 import { PartnerProvidersRoutingModule } from "./partner-providers-routing.module";
 import { PartnerProvidersComponent } from "./partner-providers.component";
-import { MaterialModule } from "../../material/material.module";
+import { MaterialModule } from "../../shared/material.module";
 import { FlexLayoutModule } from "@angular/flex-layout";
 
 @NgModule({

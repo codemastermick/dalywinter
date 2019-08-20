@@ -1,7 +1,7 @@
 import { async, ComponentFixture, TestBed } from "@angular/core/testing";
 
 import { ExternalPoliciesComponent } from "./external-policies.component";
-import { MaterialModule } from "app/material/material.module";
+import { MaterialModule } from "app/shared/material.module";
 import { PolciesRoutingModule } from "./external-policies-routing.module";
 
 describe("ExternalPoliciesComponent", () => {

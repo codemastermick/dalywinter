@@ -1,7 +1,7 @@
 import { NgModule } from "@angular/core";
 import { CommonModule } from "@angular/common";
 
-import { MaterialModule } from "../../material/material.module";
+import { MaterialModule } from "../../shared/material.module";
 import { TestimonialsRoutingModule } from "./testimonials-routing.module";
 
 import { TestimonialsComponent } from "./testimonials.component";

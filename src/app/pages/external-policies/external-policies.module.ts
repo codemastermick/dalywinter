@@ -2,7 +2,7 @@ import { NgModule } from "@angular/core";
 import { CommonModule } from "@angular/common";
 import { PolciesRoutingModule } from "./external-policies-routing.module";
 import { ExternalPoliciesComponent } from "./external-policies.component";
-import { MaterialModule } from "../../material/material.module";
+import { MaterialModule } from "../../shared/material.module";
 
 @NgModule({
   imports: [CommonModule, PolciesRoutingModule, MaterialModule],
