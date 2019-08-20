@@ -2,7 +2,7 @@
 //@import '~@angular/material/prebuilt-themes/indigo-pink.css';
 @import "./app-theme.scss";
 @import "./style.css";
-@import '~ngx-toastr/toastr';
+@import "~ngx-toastr/toastr";
 
 .mat-card {
   max-width: 80%;
@@ -78,6 +78,7 @@ html {
   white-space: nowrap;
   word-wrap: normal;
   direction: ltr;
+  font-feature-settings: "liga";
   -webkit-font-feature-settings: "liga";
   -webkit-font-smoothing: antialiased;
 }
