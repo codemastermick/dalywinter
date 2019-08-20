@@ -8,7 +8,7 @@ import { ServiceWorkerModule } from "@angular/service-worker";
 import { environment } from "../environments/environment";
 import { RouterModule } from "@angular/router";
 import { NavigationModule } from "./navigation/navigation.module";
-import { ToastrModule } from "ngx-toastr";
+import { ToastrModule, ToastContainerModule } from "ngx-toastr";
 
 import { AngularFireModule } from "@angular/fire";
 import { AngularFireAuthModule } from "@angular/fire/auth";
@@ -36,6 +36,7 @@ import { TestimonialsService } from "./shared/testimonials.service";
       closeButton: true,
       extendedTimeOut: 5000
     }),
+    ToastContainerModule,
     AngularFireModule.initializeApp(firebaseConfig),
     AngularFirestoreModule,
     AngularFireAuthModule,
