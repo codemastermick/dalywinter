@@ -19,6 +19,7 @@ script:
   - echo "Beginning build and test cycle"
   - npm run lint || travis_terminate 1
   - npm run build:ssr || travis_terminate 1
+  - cd functions && npm run build && cd ..
   - npm run test:coverage
 after_success:
   - echo "Uploading coverage reports"
