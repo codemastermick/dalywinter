@@ -1,4 +1,4 @@
-<div fxLayout="column">
+<div fxFlex fxLayout="column">
   <div fxLayout fxLayoutAlign="space-between center" class="logoHolder">
     <img src="../assets/img/company_logo_transparent.webp" alt="Daly Winter & Associates logo" class="logo" />
     <h1>{{ title | uppercase }}</h1>
@@ -13,6 +13,6 @@
       <router-outlet></router-outlet>
     </mat-sidenav-content>
   </mat-sidenav-container>
-  <app-footer [foundingYear]="foundingYear" [author]="author" fxFlexOffset="auto"></app-footer>
-  <div toastContainer></div>
+  <div toastContainer class="toast-container"></div>
+  <app-footer [foundingYear]="foundingYear" [author]="author" class="footer"></app-footer>
 </div>

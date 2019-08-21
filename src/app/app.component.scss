@@ -9,7 +9,7 @@ mat-sidenav {
 }
 
 mat-sidenav {
-  width: 250px;
+  width: 250px; //TODO change to 25%
 }
 
 .logo {
@@ -30,10 +30,18 @@ mat-sidenav {
 }
 
 .mainpage {
-  height: 100%;
-  overflow: initial;
+  min-height: 80vh;
+  overflow: auto;
 }
 
-.toast-container{
+.toast-container {
   color: whitesmoke;
+}
+
+.footer {
+  position: sticky;
+  bottom: 0;
+  width: 100%;
+  z-index: 1;
+  max-height: 2em;
 }
