@@ -1,8 +1,7 @@
-import { Component, OnInit, ViewChild, Inject, HostListener } from "@angular/core";
+import { Component, OnInit, ViewChild, HostListener } from "@angular/core";
 import { Router, NavigationEnd } from "@angular/router";
 import { ToastrService, ToastContainerDirective } from "ngx-toastr";
 
-import { DOCUMENT } from "@angular/common";
 // declare ga as a function to set and sent the events
 // tslint:disable-next-line: ban-types
 declare let ga: Function;
@@ -18,7 +17,7 @@ export class AppComponent implements OnInit {
   author = "Daly Winter & Associates LLP"; // your name or your company name
   @ViewChild(ToastContainerDirective, { read: false, static: false }) toastContainer: ToastContainerDirective;
 
-  constructor(public router: Router, private toastr: ToastrService, @Inject(DOCUMENT) document) {
+  constructor(public router: Router, private toastr: ToastrService) {
     // subscribe to router events and send page views to Google Analytics
     this.router.events.subscribe(event => {
       if (event instanceof NavigationEnd) {
@@ -47,12 +46,12 @@ export class AppComponent implements OnInit {
 
   @HostListener("window:scroll", ["$event"])
   onWindowScroll(e) {
-     if (window.pageYOffset > 100) {
-       const element = document.getElementsByTagName("app-header")[0];
-       element.classList.add("sticky-nav");
-     } else {
+    if (window.pageYOffset > 100) {
+      const element = document.getElementsByTagName("app-header")[0];
+      element.classList.add("sticky-nav");
+    } else {
       const element = document.getElementsByTagName("app-header")[0];
       element.classList.remove("sticky-nav");
-     }
+    }
   }
 }
