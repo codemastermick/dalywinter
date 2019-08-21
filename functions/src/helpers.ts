@@ -1,5 +1,6 @@
 import * as functions from "firebase-functions";
 import { Employee } from "./models/employee.model";
+import { Testimonial } from "./models/testimonial.model";
 
 export const handleCors = (req: functions.Request, res: functions.Response) => {
   res.set("Access-Control-Allow-Origin", "*");
@@ -35,8 +36,8 @@ export function mapServiceData(rows: any): any[][] {
   });
 }
 
-export function mapTestimonialData(rows: any): any[][] {
-  return rows.map((col: any[]) => {
+export function mapTestimonialData(rows: any): Testimonial[][] {
+  return rows.map((col: Testimonial[]) => {
     return {
       Name: col[0],
       Position: col[1],
