@@ -45,3 +45,11 @@ mat-sidenav {
   z-index: 1;
   max-height: 2em;
 }
+
+
+.sticky-nav{
+  position: fixed;
+  top: 0;
+  z-index: 999;
+  width: 100%;
+}
