@@ -34,8 +34,9 @@ export class AppComponent implements OnInit {
   showNotification() {
     this.toastr.overlayContainer = this.toastContainer;
     this.toastr.info(
-      // tslint:disable-next-line: max-line-length
-      "This website uses cookies for statistical purposes. For more information view our <a href=\"privacy-policy\">privacy policy</a>. By using this site, you indicate that you agree with our privacy policy.",
+      "This website uses cookies for statistical purposes." +
+      "For more information view our <a href=\"privacy-policy\">privacy policy</a>." +
+      "By using this site, you indicate that you agree with our privacy policy.",
       "Privacy Policy Notice",
       {
         enableHtml: true
