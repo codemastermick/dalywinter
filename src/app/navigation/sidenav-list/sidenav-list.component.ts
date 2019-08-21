@@ -1,4 +1,5 @@
-import { Component, OnInit, Output, EventEmitter } from "@angular/core";
+import { Component, OnInit, Output, EventEmitter, Input } from "@angular/core";
+import { MatSidenav } from "@angular/material/sidenav";
 
 @Component({
   selector: "app-sidenav-list",
@@ -7,14 +8,14 @@ import { Component, OnInit, Output, EventEmitter } from "@angular/core";
 })
 export class SidenavListComponent implements OnInit {
   @Output() sidenavClose = new EventEmitter();
-
+  @Input() sidenav: MatSidenav;
   constructor() { }
 
   ngOnInit() {
+    this.sidenav.autoFocus = false;
   }
 
   public onSidenavClose = () => {
     this.sidenavClose.emit();
   }
-
 }

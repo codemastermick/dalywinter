@@ -10,7 +10,10 @@
   <a mat-list-item>
     <div mat-list-item class="solutionsMenu">
       <button mat-icon-button [matMenuTriggerFor]="appMenu">
-        <span class="nav-caption solutionsTarget">Solutions</span>
+        <span class="nav-caption solutionsTarget">
+          Solutions
+          <mat-icon>keyboard_arrow_down</mat-icon>
+        </span>
       </button>
       <mat-menu #appMenu="matMenu">
         <button mat-menu-item routerLink="/fpo" (click)="onSidenavClose()">

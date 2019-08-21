@@ -10,6 +10,8 @@ mat-sidenav {
 
 mat-sidenav {
   width: 250px;
+  height: 100vh;
+  position: fixed;
 }
 
 .logo {
@@ -31,8 +33,9 @@ mat-sidenav {
 }
 
 .mainpage {
-  min-height: 80vh;
+  // min-height: 80vh;
   overflow: auto;
+  position: relative;
 }
 
 .toast-container {
@@ -46,8 +49,7 @@ mat-sidenav {
   z-index: 1;
 }
 
-
-.sticky-nav{
+.sticky-nav {
   position: fixed;
   top: 0;
   z-index: 999;
