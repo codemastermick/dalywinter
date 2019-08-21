@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "ngFast-pwa": {
+    "dalywinterllp": {
       "projectType": "application",
       "schematics": {
         "@schematics/angular:component": {
@@ -78,18 +78,18 @@
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
           "options": {
-            "browserTarget": "ngFast-pwa:build"
+            "browserTarget": "dalywinterllp:build"
           },
           "configurations": {
             "production": {
-              "browserTarget": "ngFast-pwa:build:production"
+              "browserTarget": "dalywinterllp:build:production"
             }
           }
         },
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "ngFast-pwa:build"
+            "browserTarget": "dalywinterllp:build"
           }
         },
         "test": {
@@ -126,11 +126,11 @@
           "builder": "@angular-devkit/build-angular:protractor",
           "options": {
             "protractorConfig": "e2e/protractor.conf.js",
-            "devServerTarget": "ngFast-pwa:serve"
+            "devServerTarget": "dalywinterllp:serve"
           },
           "configurations": {
             "production": {
-              "devServerTarget": "ngFast-pwa:serve:production"
+              "devServerTarget": "dalywinterllp:serve:production"
             }
           }
         },
@@ -155,19 +155,19 @@
         "app-shell": {
           "builder": "@angular-devkit/build-angular:app-shell",
           "options": {
-            "browserTarget": "ngFast-pwa:build",
-            "serverTarget": "ngFast-pwa:server",
+            "browserTarget": "dalywinterllp:build",
+            "serverTarget": "dalywinterllp:server",
             "route": "home"
           },
           "configurations": {
             "production": {
-              "browserTarget": "ngFast-pwa:build:production",
-              "serverTarget": "ngFast-pwa:server:production"
+              "browserTarget": "dalywinterllp:build:production",
+              "serverTarget": "dalywinterllp:server:production"
             }
           }
         }
       }
     }
   },
-  "defaultProject": "ngFast-pwa"
+  "defaultProject": "dalywinterllp"
 }

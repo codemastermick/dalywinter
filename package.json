@@ -13,7 +13,7 @@
     "serve:ssr": "node dist/server",
     "build": "npm run lint:all && npm run build:ssr",
     "build:ssr": "npm run build:client-and-server-bundles && npm run compile:server",
-    "build:client-and-server-bundles": "ng build --prod && ng run ngFast-pwa:server:production",
+    "build:client-and-server-bundles": "ng build --prod && ng run dalywinterllp:server:production",
     "test:coverage": "npm run test:ci -- --code-coverage",
     "next-update": "next-update -k true --tldr"
   },
