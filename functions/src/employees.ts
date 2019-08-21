@@ -9,7 +9,7 @@ const EMPLOYEE_SHEET_ID = "1mlRDAmYXV5UpfoTeGfTv0zqcMU2JVzgE6DI6SKUtK0E";
 export const getEmployees = functions.https.onRequest(async (request, response) => {
   handleCors(request, response);
   const auth = await g.auth.getClient({
-    scopes: ['https://www.googleapis.com/auth/spreadsheets']
+    scopes: ['https://www.googleapis.com/auth/spreadsheets.readonly']
   });
   const api = g.sheets({ version: 'v4', auth });
   api.spreadsheets.values.get({
@@ -38,7 +38,7 @@ export const queryEmployees = functions.https.onRequest(async (request, response
   const field = request.query.q;
   const searchTerm = request.query.v;
   const auth = await g.auth.getClient({
-    scopes: ['https://www.googleapis.com/auth/spreadsheets']
+    scopes: ['https://www.googleapis.com/auth/spreadsheets.readonly']
   });
   const api = g.sheets({ version: 'v4', auth });
   api.spreadsheets.values.get({
