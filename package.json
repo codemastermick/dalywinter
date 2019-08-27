@@ -12,6 +12,8 @@
     "compile:server": "webpack --config webpack.server.config.js --progress --colors",
     "serve:ssr": "node dist/server",
     "build": "npm run lint:all && npm run build:ssr",
+    "build:stats": "ng build --prod --stats-json && ng run dalywinterllp:server:production",
+    "analyze": "webpack-bundle-analyzer dist/browser/stats-es2015.json",
     "build:ssr": "npm run build:client-and-server-bundles && npm run compile:server",
     "build:client-and-server-bundles": "ng build --prod && ng run dalywinterllp:server:production",
     "test:coverage": "npm run test:ci -- --code-coverage",
