@@ -57,7 +57,7 @@
     "@angular/language-service": "^8.2.0",
     "@types/jasmine": "~3.4.0",
     "@types/jasminewd2": "~2.0.3",
-    "@types/node": "~12.7.1",
+    "@types/node": "~12.11.2",
     "codacy-coverage": "^3.4.0",
     "codecov": "^3.5.0",
     "codelyzer": "^5.0.1",
