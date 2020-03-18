@@ -71,7 +71,7 @@
     "next-update": "^3.6.0",
     "protractor": "~5.4.0",
     "ts-loader": "^6.0.4",
-    "ts-node": "~8.3.0",
+    "ts-node": "~8.7.0",
     "tslib": "^1.10.0",
     "tslint": "~5.18.0",
     "typescript": "~3.4.5",
